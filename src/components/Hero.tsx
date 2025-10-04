@@ -1,24 +1,57 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10 animate-glow" />
+      {/* Animated background gradient with parallax */}
+      <div 
+        className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10 animate-glow"
+        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+      />
       
-      {/* Floating orbs */}
-      <div className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-float" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Floating orbs with parallax */}
+      <div 
+        className="absolute top-20 left-20 w-72 h-72 bg-primary/30 rounded-full blur-3xl animate-float" 
+        style={{ transform: `translate(${scrollY * 0.3}px, ${scrollY * -0.2}px)` }}
+      />
+      <div 
+        className="absolute bottom-20 right-20 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" 
+        style={{ transform: `translate(${scrollY * -0.4}px, ${scrollY * -0.3}px)`, animationDelay: '2s' }}
+      />
       
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Additional floating particles */}
+      <div 
+        className="absolute top-1/3 right-1/4 w-32 h-32 bg-primary-glow/20 rounded-full blur-2xl animate-float"
+        style={{ transform: `translateY(${scrollY * -0.15}px)`, animationDelay: '1s' }}
+      />
+      <div 
+        className="absolute bottom-1/3 left-1/3 w-40 h-40 bg-accent/15 rounded-full blur-2xl animate-float"
+        style={{ transform: `translateY(${scrollY * -0.25}px)`, animationDelay: '3s' }}
+      />
+      
+      <div 
+        className="container mx-auto px-4 relative z-10"
+        style={{ transform: `translateY(${scrollY * -0.1}px)` }}
+      >
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-slide-up">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Hi, I'm{" "}
-              <span className="gradient-text">Afsoon Aslani</span>
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground">
+            <div className="inline-block animate-scale-in">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight hover-float">
+                Hi, I'm{" "}
+                <span className="gradient-text animate-gradient">Afsoon Aslani</span>
+              </h1>
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
               Senior Front-End Developer
             </h2>
           </div>
@@ -31,15 +64,14 @@ const Hero = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <Button 
               size="lg" 
-              className="gradient-primary hover:opacity-90 transition-opacity"
+              className="gradient-primary hover:opacity-90 transition-all hover:scale-105 hover:shadow-lg hover:shadow-primary/50"
               asChild
             >
               <a href="#contact">Get In Touch</a>
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="glass border-primary/50 hover:bg-primary/10"
+              variant="glass"
               asChild
             >
               <a href="#work">View My Work</a>
