@@ -1,69 +1,73 @@
-# 👋 Hi, I’m Afsoon Aslanii  
-### Senior Front-End Engineer | Crafting Scalable, Performant & Thoughtful Interfaces ⚡️
+# Welcome to your Lovable project
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-AfsoonAslanii-blue?logo=linkedin)](https://www.linkedin.com/in/afsoonaslanii)
-[![GitHub](https://img.shields.io/badge/GitHub-afsoonaslanii-black?logo=github)](https://github.com/afsoonaslanii)
-[![Email](https://img.shields.io/badge/Email-afsoonaslanii%40gmail.com-red?logo=gmail)](mailto:afsoonaslanii@gmail.com)
+## Project info
 
----
+**URL**: https://lovable.dev/projects/7c8cb8b1-3ea5-4333-b870-1f82f167c9a9
 
-## 🧭 About Me  
-I’m a **Front-End Engineer** who loves the intersection of **performance, architecture, and design**.  
-Over the past few years, I’ve specialized in building **scalable front-end systems** and **AI-powered experiences** using **React**, **Vue**, **Nuxt**, and **TypeScript**.  
+## How can I edit this code?
 
-What drives me isn’t just code — it’s the challenge of making something **beautifully engineered**:  
-- Fast and accessible.  
-- Easy to maintain.  
-- A pleasure to use — and to build.  
+There are several ways of editing your application.
 
-I approach development as both **engineering and craftsmanship**: every line of code should serve clarity, speed, and purpose.
+**Use Lovable**
 
----
+Simply visit the [Lovable Project](https://lovable.dev/projects/7c8cb8b1-3ea5-4333-b870-1f82f167c9a9) and start prompting.
 
-## 🧠 My Focus Areas
-- **⚡ Performance Engineering** — bundle optimization, lazy loading, code splitting, caching strategies.  
-- **🧩 Scalable Architectures** — reusable component systems, clean state management, and modular patterns.  
-- **🎨 UI & DX Harmony** — bridging design systems with developer efficiency.  
-- **🤖 Emerging Front-End Tech** — AI-driven tools, Remotion animations, Vite, and modern rendering pipelines.  
+Changes made via Lovable will be committed automatically to this repo.
 
----
+**Use your preferred IDE**
 
-## ⚙️ My Stack
-**Languages:** JavaScript (ES6+), TypeScript  
-**Frameworks:** React, Vue, Nuxt, Next.js, Remotion  
-**State Management:** Redux, Recoil, Zustand, React Query, Pinia  
-**Styling:** Tailwind CSS, MUI, SCSS, Styled Components, Shadcn  
-**Build & Tools:** Vite, Webpack, ESLint, Git, WebSocket  
-**Testing:** Cypress  
-**Design Tools:** Figma, Zeplin, Adobe XD  
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
----
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-## 🧩 How I Work
-> “Great front-end isn’t just what users see — it’s how smoothly everything fits behind the scenes.”  
+Follow these steps:
 
-- I write **modular**, **readable**, and **documented** code.  
-- I use **profiling and metrics** to guide optimizations, not assumptions.  
-- I design **maintainable systems**, not one-off features.  
-- I care deeply about **developer experience (DX)** — clear conventions and faster feedback loops.  
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
----
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-## 🧬 My Engineering Values
-- **Clarity over cleverness.** Code should explain itself.  
-- **Consistency breeds velocity.** Teams move faster with shared patterns.  
-- **Less is more.** Performance often means removing, not adding.  
-- **Design empathy.** Developers are users too — of the codebase.  
+# Step 3: Install the necessary dependencies.
+npm i
 
----
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
 
-## 🤝 Let’s Connect
-💌 [afsoonaslanii@gmail.com](mailto:afsoonaslanii@gmail.com)  
-💼 [LinkedIn](https://www.linkedin.com/in/afsoonaslanii)  
-🐙 [GitHub](https://github.com/afsoonaslanii)  
+**Edit a file directly in GitHub**
 
----
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-> I believe front-end engineering is a form of design —  
-> not just how things look, but how they **feel**, **perform**, and **evolve**.  
-> Let’s build something exceptional together. 🚀
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/7c8cb8b1-3ea5-4333-b870-1f82f167c9a9) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
