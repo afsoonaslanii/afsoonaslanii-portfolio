@@ -51,6 +51,7 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    cursor: none;
   }
 
   body {
@@ -60,6 +61,53 @@ All colors MUST be HSL.
   
   html {
     scroll-behavior: smooth;
+  }
+  
+  /* Custom Cursor */
+  body::before {
+    content: '';
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    opacity: 0.8;
+    mix-blend-mode: difference;
+    animation: cursor-pulse 2s ease-in-out infinite;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: hsl(var(--foreground));
+    pointer-events: none;
+    z-index: 10000;
+    transition: transform 0.1s ease;
+  }
+  
+  @keyframes cursor-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
+  
+  a, button, [role="button"] {
+    cursor: none;
+  }
+  
+  a:hover::before, button:hover::before, [role="button"]:hover::before {
+    transform: scale(1.5);
   }
 }
 
